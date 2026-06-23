@@ -1,0 +1,121 @@
+<robot name='amr' > 
+
+    <!-- CHASSIS -->
+    <link name='base_link'>
+        <visual>
+            <geometry>
+                <box size= '0.5 0.3 0.1'/>
+            </geometry>
+            <material name='blue'>
+                <color rgba= '0 0 1 1'/>
+            </material>
+        </visual>
+    </link>
+
+    <collision>
+        <geometry>
+            <box size="0.5 0.3 0.1"/>
+        </geometry>
+    </collision>
+
+    <inertial>
+        <mass value="1.0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia
+            ixx="0.1" ixy="0.0" ixz="0.0"
+            iyy="0.1" iyz="0.0"
+            izz="0.1"/> 
+    </inertial>
+
+    <!-- WHEELS -->
+
+    <!-- The left front wheel -->
+    <link name ="wheel_front_left">
+        <visual>
+            <geometry>
+                <cylinder radius='0.1' length='0.02'/>
+            </geometry>
+            <material name ="black">
+                <color rgba='0 0 0 1'/>
+            </material>
+        </visual>
+    </link>
+
+    <!-- The right front wheel -->
+
+    <link name ="wheel_front_right">
+        <visual>
+            <geometry>
+                <cylinder radius="0.1" length="0.02"/>
+            </geometry>
+            <material name="black">
+                <color rgba="0 0 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+
+    <!-- The left back wheel -->
+
+    <link name ="wheel_back_left">
+        <visual>
+            <geometry>
+                <cylinder radius="0.1" length="0.02"/>
+            </geometry>
+            <material name="black">
+                <color rgba="0 0 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <!-- The right back wheel -->
+
+    <link name ="wheel_back_right">
+        <visual>
+            <geometry>
+                <cylinder radius="0.1" length="0.02"/>
+            </geometry>
+            <material name="black">
+                <color rgba="0 0 0 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <!-- WHEEL JOINTS -->
+
+    <!-- LEFT front wheel JOINT -->
+
+            
+    <joint name="joint_wheel_front_left" type ="continuous">
+        <parent link="base_link"/>
+        <child link="wheel_front_left"/>
+        <origin xyz="0.2 0.15 0" rpy="1.52 0 0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <!-- RIGHT front wheel JOINT -->
+    <joint name="joint_wheel_front_right" type ="continuous">
+        <parent link="base_link"/>
+        <child link="wheel_front_right"/>
+        <origin xyz="0.2 -0.15 0" rpy="1.52 0 0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <!-- LEFT back wheel JOINT -->git 
+    <joint name="joint_wheel_back_left" type ="continuous">
+        <parent link="base_link"/>
+        <child link="wheel_back_left"/>
+        <origin xyz="-0.2 0.15 0" rpy="1.52 0 0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <!-- RIGHT back wheel JOINT -->
+    <joint name="joint_wheel_back_right" type ="continuous">
+        <parent link="base_link"/>
+        <child link="wheel_back_right"/>
+        <origin xyz="-0.2 -0.15 0" rpy="1.52 0 0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+
+</robot>
