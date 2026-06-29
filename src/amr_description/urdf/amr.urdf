@@ -101,7 +101,7 @@
         <axis xyz="0 0 1"/>
     </joint>
 
-    <!-- LEFT back wheel JOINT -->git 
+    <!-- LEFT back wheel JOINT -->
     <joint name="joint_wheel_back_left" type ="continuous">
         <parent link="base_link"/>
         <child link="wheel_back_left"/>
