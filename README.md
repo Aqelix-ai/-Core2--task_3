@@ -2,9 +2,8 @@
 
 This repository contains a basic ROS- workspace for an Autonomous Mobile Robot (AMR) model built using URDF (Unified Robot Description Format). It serves as a foundation for simulation and  visualization.
 
-⸻
 
-# Project Structure
+## Project Structure
 
 amr_ws/
 ├── src/
@@ -17,7 +16,6 @@ amr_ws/
 ├── README.md
 └── .git/
 
-⸻
 
 ## 🎯 Objective
 
@@ -27,7 +25,6 @@ The goal of this project is to:
 * Understand robot structure definition in ROS
 * Prepare the robot for simulation in tools like RViz and Gazebo
 
-⸻
 
 ## 🧩 Features
 
@@ -36,7 +33,6 @@ The goal of this project is to:
 * Modular design for future expansion (sensors, wheels, links)
 * Ready for simulation integration (RViz / Gazebo)
 
-⸻
 
 ## ⚙️ Requirements
 
@@ -45,8 +41,6 @@ To use this workspace, you should have:
 * ROS 2 : Jazzy 
 * RViz2 (for visualization)
 * Gazebo (optional for simulation)
-
-⸻
 
 
 
@@ -57,7 +51,6 @@ To visualize the URDF model in RViz:
 ros2 launch urdf_tutorial display.launch.py model:=$PWD/amr.urdf
 
 
-⸻
 
 ## 📌 Future Improvements
 
@@ -68,9 +61,8 @@ Planned upgrades include:
 * SLAM and navigation stack integration
 * Autonomous path planning
 
-⸻
 
-Learning Outcomes
+## Learning Outcomes
 
 Through this project, I gain practical understanding of:
 
@@ -78,7 +70,7 @@ Through this project, I gain practical understanding of:
 * ROS 2 workspace architecture
 * Simulation pipeline setup
 * Modular robotics system design
-⸻
+
 
 📜 License
 
